@@ -1,4 +1,303 @@
-html {
-  background: white;
-  color: black;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-style: light;
+  line-height: 1.6;
+  color: #3c3c3c;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.brand h1 {
+  font-size: 48px;
+  letter-spacing: 1px;
+  color: #3c3c3c;
+}
+
+.brand-sub {
+  font-size: 32px;
+}
+
+.site-nav ul {
+  font-size: 18px;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link:hover {
+  color: #6b5023;
+  text-decoration: underline;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.hero {
+  display: flex;
+  gap: 105px;
+  margin: 50px 0;
+}
+
+.hero-primary {
+  flex: 2;
+}
+
+.hero-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 498px;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.article-img {
+  width: 100%;
+  height: 285.26px;
+  object-fit: cover;
+  margin-bottom: 27px;
+}
+
+.hero-title {
+  font-size: 40px;
+  margin: 40px 0;
+  line-height: 1.1;
+}
+
+.hero-text {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.btn-read {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6b5023;
+  color: white;
+  font-size: 18px;
+  margin-top: 35px;
+  border: #6b5023 solid 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-read:hover {
+  background-color: white;
+  color: #6b5023;
+  border-color: #6b5023;
+}
+
+.btn-read:active {
+  background-color: #423217;
+  color: white;
+  border-color: #423217;
+  box-shadow: insent 0 3px 10px rgba(0, 0, 0, 0.4);
+  transform: translateY(2px);
+}
+
+.side-title {
+  font-size: 20px;
+  margin-top: 27px;
+  line-height: 1.2;
+}
+
+.side-text {
+  font-size: 18px;
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.side-action {
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 25px;
+  color: #3c3c3c;
+}
+
+.side-action:hover {
+  color: #6b5023;
+  text-decoration: underline;
+}
+
+.resent {
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 50px 0;
+}
+
+.recent-title {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 43px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cards {
+  display: grid;
+  gap: 56px 50px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  margin-bottom: 27px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-top: auto;
+  line-height: 1.2;
+  min-height: 2.4em;
+}
+
+.card-text {
+  flex: 1;
+  font-size: 18px;
+  margin-top: auto;
+  padding-top: 15px;
+  line-height: 1.4;
+
+}
+
+.card-action {
+  display: block;
+  font-size: 15px;
+  margin-top: auto;
+  padding-top: 15px;
+  color: #3c3c3c;
+}
+
+.card-action:hover {
+  color: #6b5023;
+  text-decoration: underline;
+}
+
+.site-footer {
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 50px 0;
+}
+
+.ticker-wrap {
+  overflow: hidden;
+  background-color: #6b5023;
+  padding: 10px 0;
+  margin-bottom: 40px;
+}
+
+.ticker {
+  display: flex;
+  gap: 80px;
+  white-space: nowrap;
+  animation: ticker-scroll 25s linear infinite;
+  background-color: transparent;
+}
+
+.ticker span {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(100vw); }
+  to   { transform: translateX(-100%); }
+}
+
+/* --- Fade in карточек при загрузке --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-footer {
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+  padding-bottom: 40px;
+}
+
+.footer-nav ul {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.footer-logo {
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #3c3c3c;
 }

@@ -28,4 +28,4 @@ with the latest exhibition, a sidebar with recent articles, and a
 - Create individual article pages
 
 ## View it live
-[Link to deployed project](#)
+[ART GALLERY News](https://ludmila92.github.io/ArtGalleryNews/)
